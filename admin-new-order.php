@@ -295,7 +295,7 @@
 							<tr>
 								<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 									<div class="headline__large " style="font-family: Georgia, Arial, sans-serif; margin: 0px 45px 12px;">
-										Your package is on its way!
+										You have a new order from <?php echo $order->get_billing_first_name() ?>!
 									</div>
 								</td>
 							</tr>
@@ -401,32 +401,42 @@
 															</tr>
 														</thead>
 														<tbody>
-															<tr class="kmTableRow">
-																<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:left;width:35%;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">
-																	<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-																		<tr>
-																			<td class="kmImageContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding:0;padding-top:0px;padding-bottom:0;padding-left:9px;padding-right:9px;">
-																				<a href="http://send.huckberry.com/mpss/c/4gA/q2wVAA/t.1w5/m3_D2AdWTb2cQK08YkBg-w/h4/xUPY4mtGQ862H6a97Mk3a591MMp2B3iqo0WA6LbZpwA-3D'Home%20Goods',%20u'Hasami%20Porcelain',%20u'Coffee%20Shop',%20u'Wedding%20Gift%20Shop'%5D/category/p/32672-13-oz-mug-cup-set-of-2?utm_campaign=Order+Confirmation+%28a8pbk7%29&amp;utm_medium=email&amp;utm_source=Order+Confirmation" target="_self" style="word-wrap:break-word;color:#E36E3A;font-weight:normal;text-decoration:underline">
-																					<img align="left" alt="" class="kmImage" src="https://huckberry.imgix.net/spree/products/166894/original/L2kMsESAgP_13_oz_mug_cup_set_of_2_0_original.jpg?fit=max&amp;w=500" width="174" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;padding-bottom:0;display:inline;vertical-align:bottom;margin-right:0;max-width:200px;">
-																				</a>
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:left;width:45%;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">
-																	<p style="margin:0;padding-bottom:0">Hasami Porcelain
-																		<br>13 oz Mug Cup (Set of 2)
-																		<br>Gloss Gray
-																		<br>13 oz
-																		<br> <em> Returnable within 30 days</em>
-																		<br>
-																	</p>
-																</td>
-																<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:right;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">
-																	<p style="margin:0;padding-bottom:0">1</p>
-																</td>
-																<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;border-right:none;text-align:right;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">$55.00</td>
-															</tr>
+															<?php
+															foreach ($order->get_items() as $key => $value) {
+																$product = wc_get_product($value['product_id']);
+																$image_id = $product->get_image_id();
+																$image_url = wp_get_attachment_image_url($image_id, 'thumbnail');
+
+															?>
+																<tr class="kmTableRow">
+																	<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:left;width:35%;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">
+																		<table align="left" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
+																			<tr>
+																				<td class="kmImageContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding:0;padding-top:0px;padding-bottom:0;padding-left:9px;padding-right:9px;">
+																					<a href="http://send.huckberry.com/mpss/c/4gA/q2wVAA/t.1w5/m3_D2AdWTb2cQK08YkBg-w/h4/xUPY4mtGQ862H6a97Mk3a591MMp2B3iqo0WA6LbZpwA-3D'Home%20Goods',%20u'Hasami%20Porcelain',%20u'Coffee%20Shop',%20u'Wedding%20Gift%20Shop'%5D/category/p/32672-13-oz-mug-cup-set-of-2?utm_campaign=Order+Confirmation+%28a8pbk7%29&amp;utm_medium=email&amp;utm_source=Order+Confirmation" target="_self" style="word-wrap:break-word;color:#E36E3A;font-weight:normal;text-decoration:underline">
+																						<img align="left" alt="" class="kmImage" src="<?php if ($image_url) {echo $image_url;}else{echo 'https://t4.ftcdn.net/jpg/03/08/68/19/360_F_308681935_VSuCNvhuif2A8JknPiocgGR2Ag7D1ZqN.jpg';} ?>" width="174" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;padding-bottom:0;display:inline;vertical-align:bottom;margin-right:0;max-width:200px;">
+																					</a>
+																				</td>
+																			</tr>
+																		</table>
+																	</td>
+																	<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:left;width:45%;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">
+																		<p style="margin:0;padding-bottom:0"><?php echo $value['name']?>
+																			<!-- <br>13 oz Mug Cup (Set of 2) -->
+																			<!-- <br>Gloss Gray -->
+																			<!-- <br>13 oz -->
+																			<!-- <br> <em> Returnable within 30 days</em> -->
+																			<br>
+																		</p>
+																	</td>
+																	<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:right;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">
+																		<p style="margin:0;padding-bottom:0"><?php echo $value['quantity']?></p>
+																	</td>
+																	<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;border-right:none;text-align:right;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">$<?php echo $value['subtotal']?></td>
+																</tr>
+															<?php
+															}
+															?>
 														</tbody>
 													</table>
 												</td>
@@ -441,10 +451,10 @@
 														<tbody>
 															<tr>
 																<td class="kmTextContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;padding-top:9px;padding-bottom:9px;background-color:#FFFFFF;padding-left:18px;padding-right:18px;">
-																	<p style="margin:0;padding-bottom:0;text-align: right;"><strong>Subtotal: </strong>$55.00
+																	<p style="margin:0;padding-bottom:0;text-align: right;"><strong>Subtotal: </strong>$<?php echo $order->get_subtotal()?>
 																		<br>
-																		<strong>Shipping: </strong><span style="line-height: 20.7999992370605px; text-align: right;">$4.98</span><strong><br>
-																			Sales Tax: </strong>$0.00
+																		<strong>Shipping: </strong><span style="line-height: 20.7999992370605px; text-align: right;">$<?php echo $order->get_shipping_total() ?></span><strong><br>
+																			Sales Tax: </strong>$<?php echo $order->get_total_tax()?>
 																		<br>
 																	</p>
 																</td>
@@ -473,7 +483,7 @@
 																	<table width="100%;" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
 																		<tbody>
 																			<tr>
-																				<td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align: right;background:#e4e4e4;padding: 9px 18px;">  <strong style="font-size: 14px;">TOTAL  </strong><span style="font-size: 14px;">$59.98</span>
+																				<td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align: right;background:#e4e4e4;padding: 9px 18px;">  <strong style="font-size: 14px;">TOTAL  </strong><span style="font-size: 14px;">$<?php echo $order->get_total()?></span>
 																				</td>
 																			</tr>
 																		</tbody>
@@ -506,7 +516,7 @@
 										<strong style="color: #88B04B; font-weight: 500;"><a style="color: #88B04B; text-decoration: none;" href="https://click.pstmrk.it/2sm/us.fullscript.com%2F%2Fu%2Fsubscription%2Fnew%3Fsubscription_order_id%3D4336684/yXdu2gY/mWJE/4lZByLYk7A/c3ByZWUvb3JkZXJfbWFpbGVyX2NvbmZpcm1fZW1haWw">Think you'll order this again?</a></strong><br>
 										You can <a style="color: #88B04B; text-decoration: none;" href="#">subscribe to these products</a> and have them automatically shipped to your door on a recurring schedule!
 									</div>
-								</td>	
+								</td>
 							</tr>
 						</table>
 						<!--/Genius Footer -->
