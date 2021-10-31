@@ -295,7 +295,7 @@
 							<tr>
 								<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 									<div class="headline__large " style="font-family: Georgia, Arial, sans-serif; margin: 0px 45px 12px;">
-										You have a new order from <?php echo $order->get_billing_first_name() ?>!
+										Je hebt een nieuwe bestelling ontvangen van <?php echo $order->get_billing_first_name() ?>!
 									</div>
 								</td>
 							</tr>
@@ -308,8 +308,8 @@
 								<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 									<div class="description__text " style="color: #555555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 300; letter-spacing: 0.8px; line-height: 30px; margin: 0 35px 18px;" align="center">
 										Good news—your order
-										<a style="color: #ab967d; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; letter-spacing: 0.8px; text-decoration: none; width: 100%;" href="#">#650050</a> has shipped! Please note, it
-										may take up to 24 hours for the tracking information to be available. If you have any questions, <a style="color: #ab967d; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; letter-spacing: 0.8px; text-decoration: none; width: 100%;" href="https://food52.com/p/contact-us">please let us know.</a>
+										<a style="color: #ab967d; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; letter-spacing: 0.8px; text-decoration: none; width: 100%;" href="<?php echo $order->get_checkout_order_received_url() ?>"><?php echo $order->id ?></a> has shipped! Please note, it
+										may take up to 24 hours for the tracking information to be available. If you have any questions, <a style="color: #ab967d; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; letter-spacing: 0.8px; text-decoration: none; width: 100%;" href="https://www.ipsumcomputerservice.com/faq/">please let us know.</a>
 									</div>
 								</td>
 							</tr>
@@ -322,10 +322,10 @@
 								<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 									<center>
 										<div>
-											<a style="-webkit-text-size-adjust: none; background-color: #0fb0dc; color: #FFF; display: inline-block; font-family: Helvetica Neue; font-size: 14px; letter-spacing: 0.8px; line-height: 40px; text-align: center; text-decoration: none; text-transform: uppercase; padding: 2px 35px;" href="#">Track Package</a>
+											<a style="-webkit-text-size-adjust: none; background-color: #0fb0dc; color: #FFF; display: inline-block; font-family: Helvetica Neue; font-size: 14px; letter-spacing: 0.8px; line-height: 40px; text-align: center; text-decoration: none; text-transform: uppercase; padding: 2px 35px;" href="<?php echo $order->get_checkout_order_received_url() ?>">Volg je pakket</a>
 										</div>
 									</center>
-								</td>
+								</td>	
 							</tr>
 						</table>
 						<!-- /Button -->
@@ -345,7 +345,7 @@
 							<tr>
 								<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 									<div class="headline__large " style="font-family: Georgia, Arial, sans-serif; margin: 0px 45px 5px;">
-										In this shipment
+										Je bestelling
 									</div>
 								</td>
 							</tr>
@@ -377,7 +377,7 @@
 														<tbody>
 															<tr>
 																<td class="kmTextContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;padding-top:15px;padding-bottom:5px;background-color:#FFFFFF;padding-left:18px;padding-right:18px;">
-																	<p style="margin:0;padding-bottom:0"><b>Here's what you ordered:</b>
+																	<p style="margin:0;padding-bottom:0"><b>Dit is wat je hebt besteld:</b>
 																	</p>
 																</td>
 															</tr>
@@ -394,10 +394,10 @@
 													<table align="left" border="0" cellpadding="0" cellspacing="0" class="kmTable" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
 														<thead>
 															<tr>
-																<th valign="top" class="kmTextContent" style="color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:left;width:35%;padding-top:4px;font-weight:bold;padding-bottom:4px;padding-left:0px;padding-right:0px;">Item</th>
+																<th valign="top" class="kmTextContent" style="color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:left;width:35%;padding-top:4px;font-weight:bold;padding-bottom:4px;padding-left:0px;padding-right:0px;">Product</th>
 																<th valign="top" class="kmTextContent" style="color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:left;width:45%;padding-top:4px;font-weight:bold;padding-bottom:4px;padding-left:0px;padding-right:0px;"></th>
-																<th valign="top" class="kmTextContent" style="color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:right;padding-top:4px;font-weight:bold;padding-bottom:4px;padding-left:0px;padding-right:0px;">Qty</th>
-																<th valign="top" class="kmTextContent" style="color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:right;padding-top:4px;font-weight:bold;padding-bottom:4px;padding-left:0px;padding-right:0px;">Price</th>
+																<th valign="top" class="kmTextContent" style="color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:right;padding-top:4px;font-weight:bold;padding-bottom:4px;padding-left:0px;padding-right:0px;">Aantal</th>
+																<th valign="top" class="kmTextContent" style="color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:right;padding-top:4px;font-weight:bold;padding-bottom:4px;padding-left:0px;padding-right:0px;">Prijs</th>
 															</tr>
 														</thead>
 														<tbody>
@@ -540,7 +540,7 @@
 							<tr>
 								<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 									<div class="headline__large " style="font-family: Georgia, Arial, sans-serif; margin: 0px 45px 12px;">
-										See You Soon!
+										We hopen je snel weer te zien!
 									</div>
 								</td>
 							</tr>
@@ -562,7 +562,7 @@
 							<!-- © Food52. All Rights Reserved. -->
 							Braamkamp 113
 							<br />
-							 7206HE Zutphen
+							7206HE Zutphen
 							<!-- 122 West 26th Street, 8th Floor, New York, -->
 						</div>
 					</div>
@@ -573,7 +573,7 @@
 						<div class="footer-text">
 							<a href="https://www.ipsumcomputerservice.com/mijn-account/" style="text-decoration: none;color: #ffffff;">Mijn account</a>
 							<br />
-							 <a href="https://www.ipsumcomputerservice.com/faq/" style="text-decoration: none;color: #ffffff;">Veelgestelde vragen</a>
+							<a href="https://www.ipsumcomputerservice.com/faq/" style="text-decoration: none;color: #ffffff;">Veelgestelde vragen</a>
 						</div>
 					</div>
 				</div>
