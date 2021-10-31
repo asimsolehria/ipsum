@@ -414,14 +414,18 @@
 																			<tr>
 																				<td class="kmImageContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding:0;padding-top:0px;padding-bottom:0;padding-left:9px;padding-right:9px;">
 																					<a href="http://send.huckberry.com/mpss/c/4gA/q2wVAA/t.1w5/m3_D2AdWTb2cQK08YkBg-w/h4/xUPY4mtGQ862H6a97Mk3a591MMp2B3iqo0WA6LbZpwA-3D'Home%20Goods',%20u'Hasami%20Porcelain',%20u'Coffee%20Shop',%20u'Wedding%20Gift%20Shop'%5D/category/p/32672-13-oz-mug-cup-set-of-2?utm_campaign=Order+Confirmation+%28a8pbk7%29&amp;utm_medium=email&amp;utm_source=Order+Confirmation" target="_self" style="word-wrap:break-word;color:#E36E3A;font-weight:normal;text-decoration:underline">
-																						<img align="left" alt="" class="kmImage" src="<?php if ($image_url) {echo $image_url;}else{echo 'https://t4.ftcdn.net/jpg/03/08/68/19/360_F_308681935_VSuCNvhuif2A8JknPiocgGR2Ag7D1ZqN.jpg';} ?>" width="174" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;padding-bottom:0;display:inline;vertical-align:bottom;margin-right:0;max-width:200px;">
+																						<img align="left" alt="" class="kmImage" src="<?php if ($image_url) {
+																																			echo $image_url;
+																																		} else {
+																																			echo 'https://t4.ftcdn.net/jpg/03/08/68/19/360_F_308681935_VSuCNvhuif2A8JknPiocgGR2Ag7D1ZqN.jpg';
+																																		} ?>" width="174" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;padding-bottom:0;display:inline;vertical-align:bottom;margin-right:0;max-width:200px;">
 																					</a>
 																				</td>
 																			</tr>
 																		</table>
 																	</td>
 																	<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:left;width:45%;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">
-																		<p style="margin:0;padding-bottom:0"><?php echo $value['name']?>
+																		<p style="margin:0;padding-bottom:0"><?php echo $value['name'] ?>
 																			<!-- <br>13 oz Mug Cup (Set of 2) -->
 																			<!-- <br>Gloss Gray -->
 																			<!-- <br>13 oz -->
@@ -430,9 +434,9 @@
 																		</p>
 																	</td>
 																	<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:right;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">
-																		<p style="margin:0;padding-bottom:0"><?php echo $value['quantity']?></p>
+																		<p style="margin:0;padding-bottom:0"><?php echo $value['quantity'] ?></p>
 																	</td>
-																	<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;border-right:none;text-align:right;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">$<?php echo $value['subtotal']?></td>
+																	<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;border-right:none;text-align:right;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">$<?php echo $value['subtotal'] ?></td>
 																</tr>
 															<?php
 															}
@@ -451,10 +455,10 @@
 														<tbody>
 															<tr>
 																<td class="kmTextContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;padding-top:9px;padding-bottom:9px;background-color:#FFFFFF;padding-left:18px;padding-right:18px;">
-																	<p style="margin:0;padding-bottom:0;text-align: right;"><strong>Subtotal: </strong>$<?php echo $order->get_subtotal()?>
+																	<p style="margin:0;padding-bottom:0;text-align: right;"><strong>Subtotal: </strong>$<?php echo $order->get_subtotal() ?>
 																		<br>
 																		<strong>Shipping: </strong><span style="line-height: 20.7999992370605px; text-align: right;">$<?php echo $order->get_shipping_total() ?></span><strong><br>
-																			Sales Tax: </strong>$<?php echo $order->get_total_tax()?>
+																			Sales Tax: </strong>$<?php echo $order->get_total_tax() ?>
 																		<br>
 																	</p>
 																</td>
@@ -483,7 +487,7 @@
 																	<table width="100%;" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
 																		<tbody>
 																			<tr>
-																				<td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align: right;background:#e4e4e4;padding: 9px 18px;">  <strong style="font-size: 14px;">TOTAL  </strong><span style="font-size: 14px;">$<?php echo $order->get_total()?></span>
+																				<td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align: right;background:#e4e4e4;padding: 9px 18px;">  <strong style="font-size: 14px;">TOTAL  </strong><span style="font-size: 14px;">$<?php echo $order->get_total() ?></span>
 																				</td>
 																			</tr>
 																		</tbody>
@@ -549,15 +553,27 @@
 
 			<tr>
 				<!-- Footer -->
-				<div class="email-footer" style="background-color: #4F5056; color: #ffffff; font-size: 10px; line-height: 15px; max-width: 600px; padding: 30px 0;border-top: 5px solid #0fb0dc;" align="center">
+				<div style="display: flex;justify-content: center;background-color: #4F5056;max-width: 600px;border-top: 5px solid #0fb0dc;">
+					<div class="email-footer" style="background-color: #4F5056; color: #ffffff; font-size: 10px; line-height: 15px; max-width: 600px; padding: 30px 0;width: 100%;" align="center">
 
-					<div class="social-header" style="color: #ffffff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 30px 0 20px;">Follow Us</div>
+						<div class="social-header" style="color: #ffffff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 30px 0 20px;">Follow Us</div>
 
-					<div class="footer-text">
-						© Food52. All Rights Reserved.
-						<br /> 122 West 26th Street, 8th Floor, New York, NY 10001
+						<div class="footer-text">
+							© Food52. All Rights Reserved.
+							<br /> 122 West 26th Street, 8th Floor, New York, 
+						</div>
+					</div>
+					<div class="email-footer" style="background-color: #4F5056; color: #ffffff; font-size: 10px; line-height: 15px; max-width: 600px; padding: 30px 0;width: 100%;" align="center">
+
+						<div class="social-header" style="color: #ffffff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 30px 0 20px;">Follow Us</div>
+
+						<div class="footer-text">
+							© Food52. All Rights Reserved.
+							<br /> 122 West 26th Street, 8th Floor, New York,
+						</div>
 					</div>
 				</div>
+
 				<!-- /Footer -->
 			</tr>
 		</table>
