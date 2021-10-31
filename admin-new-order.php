@@ -255,7 +255,7 @@
 <body style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; width: 100% !important; max-width: 600px; min-width: 100% !important; margin: 0; padding: 0;" bgcolor="#ffffff">
 
 	<center>
-		<table class="container " align="center" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#575757" style="border-collapse: collapse; max-width: 600px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; margin: 0 auto; border-color: #eaeaea; border-style: solid solid none; border-width: 1px;border-bottom: 5px solid #0fb0dc">
+		<table class="container " align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; max-width: 600px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; margin: 0 auto; border-color: #eaeaea; border-style: solid solid none; border-width: 1px;border-bottom: 5px solid #0fb0dc; background-image: url('https://www.ipsumcomputerservice.com/wp-content/uploads/2017/08/cropped-header-resized2.jpg');background-size: cover;">
 			<tr>
 				<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 					<!-- Header -->
@@ -436,7 +436,7 @@
 																	<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;text-align:right;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">
 																		<p style="margin:0;padding-bottom:0"><?php echo $value['quantity'] ?></p>
 																	</td>
-																	<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;border-right:none;text-align:right;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">$<?php echo $value['subtotal'] ?></td>
+																	<td valign="top" class="kmTextContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;border-right:none;text-align:right;;border-top-style:solid;padding-bottom:4px;padding-right:0px;padding-left:0px;padding-top:4px;border-top-color:#d9d9d9;border-top-width:1px;">€<?php echo $value['subtotal'] ?></td>
 																</tr>
 															<?php
 															}
@@ -455,10 +455,10 @@
 														<tbody>
 															<tr>
 																<td class="kmTextContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;padding-top:9px;padding-bottom:9px;background-color:#FFFFFF;padding-left:18px;padding-right:18px;">
-																	<p style="margin:0;padding-bottom:0;text-align: right;"><strong>Subtotal: </strong>$<?php echo $order->get_subtotal() ?>
+																	<p style="margin:0;padding-bottom:0;text-align: right;"><strong>Subtotal: </strong>€<?php echo $order->get_subtotal() ?>
 																		<br>
-																		<strong>Shipping: </strong><span style="line-height: 20.7999992370605px; text-align: right;">$<?php echo $order->get_shipping_total() ?></span><strong><br>
-																			Sales Tax: </strong>$<?php echo $order->get_total_tax() ?>
+																		<strong>Shipping: </strong><span style="line-height: 20.7999992370605px; text-align: right;">€<?php echo $order->get_shipping_total() ?></span><strong><br>
+																			Sales Tax: </strong>€<?php echo $order->get_total_tax() ?>
 																		<br>
 																	</p>
 																</td>
@@ -487,7 +487,7 @@
 																	<table width="100%;" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
 																		<tbody>
 																			<tr>
-																				<td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align: right;background:#e4e4e4;padding: 9px 18px;">  <strong style="font-size: 14px;">TOTAL  </strong><span style="font-size: 14px;">$<?php echo $order->get_total() ?></span>
+																				<td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align: right;background:#e4e4e4;padding: 9px 18px;">  <strong style="font-size: 14px;">TOTAL  </strong><span style="font-size: 14px;">€<?php echo $order->get_total() ?></span>
 																				</td>
 																			</tr>
 																		</tbody>
@@ -510,18 +510,18 @@
 							<tr>
 								<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 									<div style="margin-bottom: 2rem; border-radius: .25rem; padding: 20px; border-color: #eee #eee #eee #1c7aba; border-style: solid; border-width: 1px 1px 1px .4rem;">
-										<a style="color: #88B04B; text-decoration: none;" href="tel:1%20(866)%20807-3828">Call support</a> immediately if you need to cancel this order as we have a small window in which we can accommodate such requests.
+										Heb je vragen of opmerkingen over je bestellingen? Neem dan <a style="color: #88B04B; text-decoration: none;" href="https://www.ipsumcomputerservice.com/contact/">contact</a> met ons op.
 									</div>
 								</td>
 							</tr>
-							<tr>
+							<!-- <tr>
 								<td>
 									<div style="margin-top: 2rem; border-radius: .25rem; padding: 20px; border-color: #eee #eee #eee #88b04b; border-style: solid; border-width: 1px 1px 1px .4rem;">
 										<strong style="color: #88B04B; font-weight: 500;"><a style="color: #88B04B; text-decoration: none;" href="https://click.pstmrk.it/2sm/us.fullscript.com%2F%2Fu%2Fsubscription%2Fnew%3Fsubscription_order_id%3D4336684/yXdu2gY/mWJE/4lZByLYk7A/c3ByZWUvb3JkZXJfbWFpbGVyX2NvbmZpcm1fZW1haWw">Think you'll order this again?</a></strong><br>
 										You can <a style="color: #88B04B; text-decoration: none;" href="#">subscribe to these products</a> and have them automatically shipped to your door on a recurring schedule!
 									</div>
 								</td>
-							</tr>
+							</tr> -->
 						</table>
 						<!--/Genius Footer -->
 
@@ -556,20 +556,24 @@
 				<div style="display: flex;justify-content: center;background-color: #4F5056;max-width: 600px;border-top: 5px solid #0fb0dc;">
 					<div class="email-footer" style="background-color: #4F5056; color: #ffffff; font-size: 10px; line-height: 15px; max-width: 600px; padding: 30px 0;width: 100%;" align="center">
 
-						<div class="social-header" style="color: #ffffff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 30px 0 20px;">Follow Us</div>
+						<div class="social-header" style="color: #ffffff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 30px 0 20px;">Ipsum Computer Service</div>
 
 						<div class="footer-text">
-							© Food52. All Rights Reserved.
-							<br /> 122 West 26th Street, 8th Floor, New York, 
+							<!-- © Food52. All Rights Reserved. -->
+							Braamkamp 113
+							<br />
+							 7206HE Zutphen
+							<!-- 122 West 26th Street, 8th Floor, New York, -->
 						</div>
 					</div>
 					<div class="email-footer" style="background-color: #4F5056; color: #ffffff; font-size: 10px; line-height: 15px; max-width: 600px; padding: 30px 0;width: 100%;" align="center">
 
-						<div class="social-header" style="color: #ffffff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 30px 0 20px;">Follow Us</div>
+						<div class="social-header" style="color: #ffffff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 30px 0 20px;"><a href="https://www.ipsumcomputerservice.com/contact/" style="text-decoration: none;color: #ffffff;">Contact</a></div>
 
 						<div class="footer-text">
-							© Food52. All Rights Reserved.
-							<br /> 122 West 26th Street, 8th Floor, New York,
+							<a href="https://www.ipsumcomputerservice.com/mijn-account/" style="text-decoration: none;color: #ffffff;">Mijn account</a>
+							<br />
+							 <a href="https://www.ipsumcomputerservice.com/faq/" style="text-decoration: none;color: #ffffff;">Veelgestelde vragen</a>
 						</div>
 					</div>
 				</div>
