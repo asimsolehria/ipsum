@@ -307,7 +307,7 @@
 							<tr>
 								<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 									<div class="description__text " style="color: #555555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 300; letter-spacing: 0.8px; line-height: 30px; margin: 0 35px 18px;" align="center">
-										Your order details are listed below!
+										Uw bestelgegevens staan ​​hieronder vermeld!
 									</div>
 								</td>
 							</tr>
@@ -323,7 +323,7 @@
 											<a style="-webkit-text-size-adjust: none; background-color: #0fb0dc; color: #FFF; display: inline-block; font-family: Helvetica Neue; font-size: 14px; letter-spacing: 0.8px; line-height: 40px; text-align: center; text-decoration: none; text-transform: uppercase; padding: 2px 35px;" href="<?php echo $order->get_checkout_order_received_url() ?>">Volg je pakket</a>
 										</div>
 									</center>
-								</td>	
+								</td>
 							</tr>
 						</table>
 						<!-- /Button -->
