@@ -255,12 +255,12 @@
 <body style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; width: 100% !important; max-width: 600px; min-width: 100% !important; margin: 0; padding: 0;" bgcolor="#ffffff">
 
 	<center>
-		<table class="container " align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; max-width: 600px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; margin: 0 auto; border-color: #eaeaea; border-style: solid solid none; border-width: 1px;border-bottom: 5px solid #0fb0dc; background-image: url('https://www.ipsumcomputerservice.com/wp-content/uploads/2017/08/cropped-header-resized2.jpg');background-size: cover;">
-			<tr>
+		<table class="container " align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; max-width: 600px; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; margin: 0 auto; border-color: #eaeaea; border-style: solid solid none; border-width: 1px;">
+			<tr style="border-bottom: 5px solid #0fb0dc; background-image: url('https://www.ipsumcomputerservice.com/wp-content/uploads/2017/08/cropped-header-resized2.jpg');background-size: cover;">
 				<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 					<!-- Header -->
 					<div class="email-header" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 15px 0 18px;" align="center">
-						<a href="https://food52.com/" title="Food52" target="_blank" style="color: #666; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-decoration: none;">
+						<a href="https://www.ipsumcomputerservice.com/" title="Food52" target="_blank" style="color: #666; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; text-decoration: none;">
 							<img src="https://www.ipsumcomputerservice.com/wp-content/uploads/2020/07/ICSlogo.png" alt="Food52" width="250" height="21" style="-ms-interpolation-mode: bicubic; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; height: auto !important; max-width: 100%; outline: none; text-decoration: none; border: none;" />
 						</a>
 					</div>
@@ -463,10 +463,10 @@
 														<tbody>
 															<tr>
 																<td class="kmTextContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;padding-top:9px;padding-bottom:9px;background-color:#FFFFFF;padding-left:18px;padding-right:18px;">
-																	<p style="margin:0;padding-bottom:0;text-align: right;"><strong>Subtotal: </strong>€<?php echo $order->get_subtotal() ?>
+																	<p style="margin:0;padding-bottom:0;text-align: right;"><strong>Subtotaal: </strong>€<?php echo $order->get_subtotal() ?>
 																		<br>
-																		<strong>Shipping: </strong><span style="line-height: 20.7999992370605px; text-align: right;">€<?php echo $order->get_shipping_total() ?></span><strong><br>
-																			Sales Tax: </strong>€<?php echo $order->get_total_tax() ?>
+																		<strong>Verzendkosten: </strong><span style="line-height: 20.7999992370605px; text-align: right;">€<?php echo $order->get_shipping_total() ?></span><strong><br>
+																			BTW: </strong>€<?php echo $order->get_total_tax() ?>
 																		<br>
 																	</p>
 																</td>
@@ -495,7 +495,7 @@
 																	<table width="100%;" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
 																		<tbody>
 																			<tr>
-																				<td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align: right;background:#e4e4e4;padding: 9px 18px;">  <strong style="font-size: 14px;">TOTAL  </strong><span style="font-size: 14px;">€<?php echo $order->get_total() ?></span>
+																				<td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;text-align: right;background:#e4e4e4;padding: 9px 18px;">  <strong style="font-size: 14px;">TOTAAL  </strong><span style="font-size: 14px;">€<?php echo $order->get_total() ?></span>
 																				</td>
 																			</tr>
 																		</tbody>
@@ -548,7 +548,7 @@
 							<tr>
 								<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 									<div class="headline__large " style="font-family: Georgia, Arial, sans-serif; margin: 0px 45px 12px;">
-										We hopen je snel weer te zien!
+										Bedankt voor je bestelling!
 									</div>
 								</td>
 							</tr>
@@ -561,30 +561,32 @@
 
 			<tr>
 				<!-- Footer -->
-				<div style="display: flex;justify-content: center;background-color: #4F5056;max-width: 600px;border-top: 5px solid #0fb0dc;">
-					<div class="email-footer" style="background-color: #4F5056; color: #ffffff; font-size: 10px; line-height: 15px; max-width: 600px; padding: 30px 0;width: 100%;" align="center">
+				<td>
+					<div style="display: flex;justify-content: center;background-color: #4F5056;max-width: 600px;border-top: 5px solid #0fb0dc;">
+						<div class="email-footer" style="background-color: #4F5056; color: #ffffff; font-size: 10px; line-height: 15px; max-width: 600px; padding: 30px 0;width: 100%;" align="center">
 
-						<div class="social-header" style="color: #ffffff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 30px 0 20px;">Ipsum Computer Service</div>
+							<div class="social-header" style="color: #ffffff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 30px 0 20px;">Ipsum Computer Service</div>
 
-						<div class="footer-text">
-							<!-- © Food52. All Rights Reserved. -->
-							Braamkamp 113
-							<br />
-							7206HE Zutphen
-							<!-- 122 West 26th Street, 8th Floor, New York, -->
+							<div class="footer-text">
+								<!-- © Food52. All Rights Reserved. -->
+								Braamkamp 113
+								<br />
+								7206HE Zutphen
+								<!-- 122 West 26th Street, 8th Floor, New York, -->
+							</div>
+						</div>
+						<div class="email-footer" style="background-color: #4F5056; color: #ffffff; font-size: 10px; line-height: 15px; max-width: 600px; padding: 30px 0;width: 100%;" align="center">
+
+							<div class="social-header" style="color: #ffffff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 30px 0 20px;"><a href="https://www.ipsumcomputerservice.com/contact/" style="text-decoration: none;color: #ffffff;">Contact</a></div>
+
+							<div class="footer-text">
+								<a href="https://www.ipsumcomputerservice.com/mijn-account/" style="text-decoration: none;color: #ffffff;">Mijn account</a>
+								<br />
+								<a href="https://www.ipsumcomputerservice.com/faq/" style="text-decoration: none;color: #ffffff;">Veelgestelde vragen</a>
+							</div>
 						</div>
 					</div>
-					<div class="email-footer" style="background-color: #4F5056; color: #ffffff; font-size: 10px; line-height: 15px; max-width: 600px; padding: 30px 0;width: 100%;" align="center">
-
-						<div class="social-header" style="color: #ffffff; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; padding: 30px 0 20px;"><a href="https://www.ipsumcomputerservice.com/contact/" style="text-decoration: none;color: #ffffff;">Contact</a></div>
-
-						<div class="footer-text">
-							<a href="https://www.ipsumcomputerservice.com/mijn-account/" style="text-decoration: none;color: #ffffff;">Mijn account</a>
-							<br />
-							<a href="https://www.ipsumcomputerservice.com/faq/" style="text-decoration: none;color: #ffffff;">Veelgestelde vragen</a>
-						</div>
-					</div>
-				</div>
+				</td>
 
 				<!-- /Footer -->
 			</tr>
