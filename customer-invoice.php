@@ -307,7 +307,7 @@
 							<tr>
 								<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 									<div class="description__text " style="color: #555555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 300; letter-spacing: 0.8px; line-height: 30px; margin: 0 35px 18px;" align="center">
-										Hallo <?php echo $order->get_billing_first_name() ?>, Dit zijn de gegevens van je bestelling, geplaatst op <?php $order->order_date ?>:
+										Hallo <?php echo $order->get_billing_first_name() ?>, Dit zijn de gegevens van je bestelling, geplaatst op <?php echo $order->order_date ?>:
 										<!-- <br>
 										Je kunt je order met de volgende Track & Trace knop volgen! -->
 									</div>
