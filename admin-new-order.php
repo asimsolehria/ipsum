@@ -307,9 +307,7 @@
 							<tr>
 								<td style="border-collapse: collapse; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0;">
 									<div class="description__text " style="color: #555555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 300; letter-spacing: 0.8px; line-height: 30px; margin: 0 35px 18px;" align="center">
-										Good news—your order
-										<a style="color: #ab967d; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; letter-spacing: 0.8px; text-decoration: none; width: 100%;" href="<?php echo $order->get_checkout_order_received_url() ?>"><?php echo $order->id ?></a> has shipped! Please note, it
-										may take up to 24 hours for the tracking information to be available. If you have any questions, <a style="color: #ab967d; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 500; letter-spacing: 0.8px; text-decoration: none; width: 100%;" href="https://www.ipsumcomputerservice.com/faq/">please let us know.</a>
+										Your order details are listed below!
 									</div>
 								</td>
 							</tr>
@@ -377,7 +375,7 @@
 														<tbody>
 															<tr>
 																<td class="kmTextContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;padding-top:15px;padding-bottom:5px;background-color:#FFFFFF;padding-left:18px;padding-right:18px;">
-																	<p style="margin:0;padding-bottom:0"><b>Dit is wat je hebt besteld:</b>
+																	<p style="margin:0;padding-bottom:0"><b>Dit is wat er is besteld:</b>
 																	</p>
 																</td>
 															</tr>
