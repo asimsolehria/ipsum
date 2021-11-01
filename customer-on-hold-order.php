@@ -309,7 +309,7 @@
  									<div class="description__text " style="color: #555555; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 300; letter-spacing: 0.8px; line-height: 30px; margin: 0 35px 18px;" align="center">
  										Hallo <?php echo $order->get_billing_first_name() ?>, Bedankt voor je bestelling. Hij staat in de wacht tot we bevestigen dat de betaling is ontvangen. In de tussentijd vind je hier een herinnering aan wat je hebt besteld:
  										<br>
- 										U kunt uw bestelling volgen door op de onderstaande track-knop te klikken!
+ 										Je kunt je order met de volgende Track & Trace knop volgen!
  									</div>
  								</td>
  							</tr>
